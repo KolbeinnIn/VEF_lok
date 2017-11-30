@@ -75,15 +75,17 @@ def karfa():
 def baeta_i_korfu(id):
     for x in range(len(asd)):
         if id == x:
+            print("asd")
             session = request.environ.get('beaker.session')
             session[id] = 'Vara '+str(id)
             session.save()
             return redirect('/karfa')
 
         elif id in asd[x]:
+            print("--------", x, "--------")
             session = request.environ.get('beaker.session')
-            session[asd[x][0]] = 'Vara ' + str(asd[x][x]) + "asdasd"
-            print(asd[x-1][0])
+            session[x] = asd[x][1]#'Vara ' + str(asd[x][0]) + "asdasd"
+            print(asd[x][0])
             session.save()
             return redirect('/karfa')
 
