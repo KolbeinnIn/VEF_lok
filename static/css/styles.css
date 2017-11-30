@@ -1,0 +1,9 @@
+body{
+    background-color:blue;
+    text-align:center;
+    margin: 0 auto;
+    max-width:60em;
+}
+*{
+    color:red;
+}
