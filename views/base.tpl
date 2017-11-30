@@ -13,6 +13,5 @@
        </header>
       {{!base}}
   </main>
-  <a href="/"></a>
 </body>
 </html>

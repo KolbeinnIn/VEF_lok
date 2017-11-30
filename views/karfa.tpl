@@ -6,7 +6,7 @@
         <p><a href="/">Versla meira</a></p>
     % else:
         % for i in range(len(karfa)):
-            <p> {{karfa[i]}} <p>
+            <p><a href="/karfa/{{karfa[i]}}">{{karfa[i]}}</a><p>
         % end
     <p style="padding-top:14px;">Samtals: {{verd}}kr</p>
     <p><a href="/">Versla meira</a></p>

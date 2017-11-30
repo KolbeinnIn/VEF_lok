@@ -7,5 +7,6 @@
                     <br>
                 %end
             % end
+            <a href="/karfa">Karfan þín</a>
             <p>Þú hefur skoðað síðuna: {{teljari}} sinnum</p>
         </div>

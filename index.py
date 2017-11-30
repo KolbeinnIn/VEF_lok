@@ -12,25 +12,20 @@ cursor = db.cursor()
 cursor.execute("select * from vorur")
 numrows = int(cursor.rowcount)
 vorur = {}
-listivorur = []
-kulVara = 0
-teljari = 0
+karfa = []
 
 asd = []
 print(numrows)
 for x in range(numrows):
     row = cursor.fetchone()
     asd.append(row)
-    if row:
-        teljari += 1
-        vorur = {}
-        vorur["voruid"] = row[0]
-        vorur["name"] = row[1]
-        vorur["verd"] = row[2]
-        listivorur.append(vorur)
 
 
 
+print(asd[15][3])
+asd1 = asd[15][3]
+asd2 = asd1.replace("\r", "").split("\n")
+print(asd2)
 
 
 @route('/static/<filepath>')
@@ -60,16 +55,14 @@ def index():
     return template('index.tpl', asd=asd, teljari=s['test'])
 
 @route('/karfa')
-def karfa():
+def karfan():
     session = request.environ.get('beaker.session')
-    karfa = []
     verdK = 0
     for x in range(numrows+1):
         if session.get(x):
             vara = session.get(x)
             karfa.append(vara)
-
-    print(karfa)
+            print(karfa)
     for x in karfa:
         for i in range(len(asd)):
             if x == asd[i][1]:
@@ -103,6 +96,17 @@ def eyda_ur_korfu():
     global verdK
     verdK = 0
     return redirect('/karfa')
+
+@route("/karfa/<name>")
+def index(name):
+    if name in karfa:
+        for x in asd:
+            global u
+            u = str(x[3]).replace("\r", "").split("\n")
+            a = x[1]
+    else:
+        return redirect("/")
+    return template("uppl", a=a, u=u)
 
 #run(host='0.0.0.0', port="argv[1]")
 run(host='localhost', port=8080, app=app)
