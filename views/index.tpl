@@ -1,8 +1,11 @@
         % rebase("base.tpl")
         <h2>Veldu vöru í körfu!</h2>
         <div>
-            % for i in range(len(vorur)):
-               <p><a href="/karfa/baeta/{{vorur[i]['voruid']}}">{{vorur[i]['name']}}</a></p>
+            %for i in asd:
+                %for x in range(1):
+                    <p><a href="/karfa/baeta/{{i[0]}}">{{i[x+1]}} verð: {{i[x+2]}}</a></p>
+                    <br>
+                %end
             % end
             <p>Þú hefur skoðað síðuna: {{teljari}} sinnum</p>
         </div>

@@ -11,9 +11,11 @@
        <header>
             <h1>Vefverslun</h1>
        </header>
-        % for i in asd:
-            %for x in i:
-                <p>{{i[x]}}</p>
+        %for i in asd:
+            %for x in range(1):
+                <p>{{i[x+1]}} verð: {{i[x+2]}}</p>
+                <br>
+            %end
         % end
   </main>
 </body>
