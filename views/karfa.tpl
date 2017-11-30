@@ -8,7 +8,7 @@
         % for i in range(len(karfa)):
             <p> {{karfa[i]}} <p>
         % end
-
+    <p style="padding-top:14px;">Samtals: {{verd}}kr</p>
     <p><a href="/">Versla meira</a></p>
     <p><a href="/karfa/eyda">Fjarlægum allar vörur úr körfu</a></p>
 </div>

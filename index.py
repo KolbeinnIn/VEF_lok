@@ -22,7 +22,6 @@ for x in range(numrows):
     row = cursor.fetchone()
     asd.append(row)
     if row:
-        print(row)
         teljari += 1
         vorur = {}
         vorur["voruid"] = row[0]
@@ -31,7 +30,6 @@ for x in range(numrows):
         listivorur.append(vorur)
 
 
-print(asd[2][0])
 
 
 
@@ -53,6 +51,7 @@ app = SessionMiddleware(app(), sess)
 
 
 
+
 @route('/')
 def index():
     s = request.environ.get('beaker.session')
@@ -64,37 +63,45 @@ def index():
 def karfa():
     session = request.environ.get('beaker.session')
     karfa = []
+    verdK = 0
     for x in range(numrows+1):
         if session.get(x):
             vara = session.get(x)
             karfa.append(vara)
 
-    return template('karfa.tpl', karfa=karfa)
+    print(karfa)
+    for x in karfa:
+        for i in range(len(asd)):
+            if x == asd[i][1]:
+                verdK += asd[i][2]
+                print(asd[i][2])
+
+    return template('karfa.tpl', karfa=karfa, verd=verdK)
 
 @route('/karfa/baeta/<id:int>')
 def baeta_i_korfu(id):
     for x in range(len(asd)):
-        if id == x:
+        """if id == x:
             print("asd")
             session = request.environ.get('beaker.session')
             session[id] = 'Vara '+str(id)
             session.save()
-            return redirect('/karfa')
+            return redirect('/karfa')"""
 
-        elif id in asd[x]:
-            print("--------", x, "--------")
+        if id in asd[x]:
             session = request.environ.get('beaker.session')
-            session[x] = asd[x][1]#'Vara ' + str(asd[x][0]) + "asdasd"
+            session[x] = asd[x][1]
             print(asd[x][0])
             session.save()
             return redirect('/karfa')
-
 
 
 @route('/karfa/eyda')
 def eyda_ur_korfu():
     session = request.environ.get('beaker.session')
     session.delete()
+    global verdK
+    verdK = 0
     return redirect('/karfa')
 
 #run(host='0.0.0.0', port="argv[1]")
