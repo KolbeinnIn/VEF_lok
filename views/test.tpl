@@ -11,9 +11,9 @@
        <header>
             <h1>Vefverslun</h1>
        </header>
-        % for i in range(numrows):
-            %row = cursor.fetchone()
-            <p>{{row}}</p>
+        % for i in asd:
+            %for x in i:
+                <p>{{i[x]}}</p>
         % end
   </main>
 </body>

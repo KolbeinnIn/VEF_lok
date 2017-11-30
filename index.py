@@ -15,8 +15,11 @@ vorur = {}
 listivorur = []
 kulVara = 0
 teljari = 0
+
+asd = []
 for x in range(numrows):
     row = cursor.fetchone()
+    asd.append(row)
     print(row)
     if row:
         teljari += 1
@@ -49,7 +52,7 @@ print(vorurasd)
 print(listivorur)
 @route('/')
 def index():
-    return template('test.tpl', row=row, numrows=numrows, vorur=vorur, cursor=cursor)
+    return template('test.tpl', row=row, numrows=numrows, vorur=vorur, cursor=cursor, asd=asd)
 
 
 """
