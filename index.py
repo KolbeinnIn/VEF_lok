@@ -86,7 +86,7 @@ def baeta_i_korfu(id):
             session = request.environ.get('beaker.session')
             session[x] = asd[x][1]
             session.save()
-            return redirect('/karfa')
+            return redirect('/')
 
 
 @route('/karfa/eyda')
