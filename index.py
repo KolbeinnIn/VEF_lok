@@ -1,4 +1,4 @@
-# Kolbeinn Ingólfsson og Águst örn Eiðsson
+# Kolbeinn Ingólfsson og Águst Örn Eiðsson
 # 29.11.2017
 # Lokaverkefni - VEF
 
@@ -20,7 +20,16 @@ for x in range(numrows):
     asd.append(row)
 
 
+@error(404)
+def index():
+    return "villa"
+    #villa = "Villa"
+    #return template("villa", villa=villa)
 
+@error(500)
+def index():
+    villa = "Villa"
+    return template("villa", villa=villa)
 
 @route('/static/<filepath>')
 def static(filepath):
@@ -50,6 +59,7 @@ def index():
 
 @route('/karfa')
 def karfan():
+    karfa = []
     session = request.environ.get('beaker.session')
     verdK = 0
     for x in range(numrows+1):
@@ -91,18 +101,20 @@ def eyda_ur_korfu():
 
 @route("/karfa/<name>")
 def index(name):
-    print(karfa)
-    print(name)
     for x in asd:
         if name in karfa:
             if name == x[1]:
                 print(x)
                 global u
                 u = str(x[3]).replace("\r", "").split("\n")
+                global a
                 a = x[1]
                 break
-    else:
-        return redirect("/")
+            else:
+                return redirect("/")
+        else:
+            return redirect("/")
+
     return template("uppl", a=a, u=u)
 
 #run(host='0.0.0.0', port="argv[1]")
