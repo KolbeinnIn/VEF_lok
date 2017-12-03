@@ -4,7 +4,7 @@
 
 from bottle import *
 from pymysql import *
-from beaker.middleware import SessionMiddleware
+from beaker.middleware import *
 
 
 db = Connect(host="tsuts.tskoli.is", user="0908002640", password="mypassword", db="0908002640_vefLok")
@@ -126,7 +126,7 @@ def index(name):
     return template("uppl", a=a, u=u)
 
 
-run(host='0.0.0.0', port="argv[1]")
+run(host='0.0.0.0', port="arg[1]", app=app)
 
 
 #run(host='localhost', port=8080, app=app)
