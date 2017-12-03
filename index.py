@@ -14,8 +14,8 @@ cursor.execute("select * from vorur")
 numrows = int(cursor.rowcount)
 vorur = {}
 karfa = []
-
 asd = []
+
 for x in range(numrows):
     row = cursor.fetchone()
     asd.append(row)
@@ -96,6 +96,7 @@ def eyda_ur_korfu():
     global verdK
     verdK = 0
     return redirect('/karfa')
+
 
 @route("/karfa/<name>")
 def index(name):
