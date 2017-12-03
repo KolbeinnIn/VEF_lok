@@ -2,7 +2,6 @@
 # 29.11.2017
 # Lokaverkefni - VEF
 
-from os import *
 from bottle import *
 from pymysql import *
 from beaker.middleware import *
@@ -129,6 +128,6 @@ def index(name):
 
 #print(argv)
 
-run(host="0.0.0.0", port=int(environ.get("PORT", 5000)))
-#run(host='0.0.0.0', port=5000, app=app)
+#run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+run(host='0.0.0.0', port=5000, app=app)
 #run(host='0.0.0.0', port=8080, app=app)
