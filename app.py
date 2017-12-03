@@ -127,4 +127,5 @@ def index(name):
     return template("uppl", a=a, u=u)
 
 
-run(host='0.0.0.0', port="argv[1]", app=app)
+#run(host='0.0.0.0', port="argv[1]", app=app)
+run(host='0.0.0.0', port=8080, app=app)
