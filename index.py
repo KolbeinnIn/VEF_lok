@@ -15,17 +15,11 @@ vorur = {}
 karfa = []
 
 asd = []
-print(numrows)
 for x in range(numrows):
     row = cursor.fetchone()
     asd.append(row)
 
 
-
-print(asd[15][3])
-asd1 = asd[15][3]
-asd2 = asd1.replace("\r", "").split("\n")
-print(asd2)
 
 
 @route('/static/<filepath>')
@@ -67,7 +61,6 @@ def karfan():
         for i in range(len(asd)):
             if x == asd[i][1]:
                 verdK += asd[i][2]
-                print(asd[i][2])
 
     return template('karfa.tpl', karfa=karfa, verd=verdK)
 
@@ -84,7 +77,6 @@ def baeta_i_korfu(id):
         if id in asd[x]:
             session = request.environ.get('beaker.session')
             session[x] = asd[x][1]
-            print(asd[x][0])
             session.save()
             return redirect('/karfa')
 
@@ -99,11 +91,16 @@ def eyda_ur_korfu():
 
 @route("/karfa/<name>")
 def index(name):
-    if name in karfa:
-        for x in asd:
-            global u
-            u = str(x[3]).replace("\r", "").split("\n")
-            a = x[1]
+    print(karfa)
+    print(name)
+    for x in asd:
+        if name in karfa:
+            if name == x[1]:
+                print(x)
+                global u
+                u = str(x[3]).replace("\r", "").split("\n")
+                a = x[1]
+                break
     else:
         return redirect("/")
     return template("uppl", a=a, u=u)
