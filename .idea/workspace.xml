@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="126854aa-67f1-4f01-a156-0fc88171229b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/lokaverkefni.iml" afterPath="$PROJECT_DIR$/.idea/lokaverkefni.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lokaverkefni.py" afterPath="$PROJECT_DIR$/lokaverkefni.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lokaverkefni.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,24 +17,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.tpl">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lokaverkefni.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lokaverkefni.py">
+      <file leaf-file-name="app1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
-              <folding>
-                <element signature="e#78#98#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="419">
+              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,6 +87,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -127,12 +133,13 @@
         <option value="$PROJECT_DIR$/views/uppl.tpl" />
         <option value="$PROJECT_DIR$/index.py" />
         <option value="$PROJECT_DIR$/lokaverkefni.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="326" />
-    <option name="y" value="-20" />
+    <option name="x" value="2211" />
+    <option name="y" value="-8" />
     <option name="width" value="1379" />
     <option name="height" value="981" />
   </component>
@@ -447,12 +454,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34994698" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34994698" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -751,6 +758,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lokaverkefni.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="110" column="28" lean-forward="true" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -759,13 +774,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lokaverkefni.py">
+    <entry file="file://$PROJECT_DIR$/app1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
-          <folding>
-            <element signature="e#78#98#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="419">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

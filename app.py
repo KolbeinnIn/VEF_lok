@@ -4,7 +4,7 @@
 
 from bottle import *
 from pymysql import *
-from beaker.middleware import SessionMiddleware
+from beaker.middleware import *
 
 
 db = Connect(host="tsuts.tskoli.is", user="0908002640", password="mypassword", db="0908002640_vefLok")
@@ -22,14 +22,12 @@ for x in range(numrows):
 
 @error(404)
 def index():
-    return "villa"
-    #villa = "Villa"
-    #return template("villa", villa=villa)
+    return "Villa, síða ekki til"
 
 @error(500)
 def index():
-    villa = "Villa"
-    return template("villa", villa=villa)
+    return "Villa"
+
 
 @route('/static/<filepath>')
 def static(filepath):
@@ -59,9 +57,9 @@ def index():
 
 @route('/karfa')
 def karfan():
-    karfa = []
     session = request.environ.get('beaker.session')
     verdK = 0
+    karfa = []
     for x in range(numrows+1):
         if session.get(x):
             vara = session.get(x)
@@ -101,20 +99,31 @@ def eyda_ur_korfu():
 
 @route("/karfa/<name>")
 def index(name):
-    for x in asd:
-        if name in karfa:
+    flag = True
+    session = request.environ.get('beaker.session')
+    karfa = []
+    for x in range(numrows + 1):
+        if session.get(x):
+            vara = session.get(x)
+            karfa.append(vara)
+    if name in karfa:
+        for x in asd:
             if name == x[1]:
-                print(x)
+                flag = True
                 global u
                 u = str(x[3]).replace("\r", "").split("\n")
                 global a
                 a = x[1]
                 break
             else:
-                return redirect("/")
-        else:
-            return redirect("/")
+                print("asd")
+                flag = False
+    else:
+        flag = False
+    if not flag:
+        return redirect("/")
 
     return template("uppl", a=a, u=u)
+
 
 run(host='0.0.0.0', port="argv[1]", app=app)
