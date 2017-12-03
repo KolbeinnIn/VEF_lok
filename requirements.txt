@@ -1,8 +1,3 @@
-pip
-setuptools
 bottle
 bottle-beaker
-Beaker
 pymysql
-PyMySql
-PyMySql3
