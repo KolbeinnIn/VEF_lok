@@ -131,4 +131,5 @@ def index(name):
 #run(host='0.0.0.0', port=8080, app=app)
 
 
-run(app=app, host='0.0.0.0')
+run(host="0.0.0.0", port=argv[1])
+
